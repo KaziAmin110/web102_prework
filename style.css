@@ -24,6 +24,15 @@ body {
     align-items: flex-start;
 }
 
+.search-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-form {
+    display: flex;
+}
+
 .stats-container:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
