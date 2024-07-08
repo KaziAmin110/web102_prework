@@ -103,6 +103,9 @@ gamesCard.innerText = numGames;
  * Skills used: functions, filter
 */
 
+const searchText = document.querySelector('#search');
+
+
 // show only games that do not yet have enough funding
 function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
@@ -114,6 +117,7 @@ function filterUnfundedOnly() {
 
     // use the function we previously created to add the unfunded games to the DOM
     addGamesToPage(unfundedGames);
+    searchText.value = '';
 }
 
 // show only games that are fully funded
@@ -130,6 +134,8 @@ function filterFundedOnly() {
 
     // use the function we previously created to add funded games to the DOM
     addGamesToPage(fundedGames);
+    searchText.value = '';
+
 }
 
 // show all games
@@ -138,6 +144,8 @@ function showAllGames() {
 
     // add all games from the JSON data to the DOM
     addGamesToPage(GAMES_JSON);
+    searchText.value = '';
+
 }
 
 // select each button in the "Our Games" section
@@ -199,7 +207,6 @@ secondGameContainer.appendChild(divSecond);
 
 function searchGame() {
     deleteChildElements(gamesContainer);
-    const searchText = document.querySelector('#search');
     console.log(searchText.value);
     const filteredGames = GAMES_JSON.filter((game) => {
         return game.name.toLowerCase().includes(searchText.value.toLowerCase().trim());
@@ -207,6 +214,6 @@ function searchGame() {
 
     addGamesToPage(filteredGames);
 }
-
 const submitBtn = document.querySelector('.submit-btn');
+
 submitBtn.addEventListener('click', searchGame);

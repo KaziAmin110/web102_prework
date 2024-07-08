@@ -31,6 +31,24 @@ body {
 
 .search-form {
     display: flex;
+    align-items: center;
+}
+
+#search {
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    
+}
+
+.submit-btn {
+    height: 2rem;
+    width: 2rem;
+}
+
+.search-icon {
+    width: 25px;
+    height: 25px;
 }
 
 .stats-container:hover {
