@@ -24,8 +24,8 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/web-102-pre-work-demo-kazi-amin-5szXIyI' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-Link:  https://imgur.com/gallery/web-102-pre-work-demo-kazi-amin-5szXIyI 
+<img src='https://imgur.com/a/web-102-pre-work-demo-kazi-amin-5szXIyI](https://imgur.com/qhmq1Cu' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Link:  https://imgur.com/qhmq1Cu
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
