@@ -30,8 +30,8 @@ function addGamesToPage(games) {
 
 
     // loop over each item in the data
-    for (let i = 0; i < GAMES_JSON.length; i++ ) {
-        const game = GAMES_JSON[i];
+    for (let i = 0; i < games.length; i++ ) {
+        const game = games[i];
         
 
         // create a new div element, which will become the game card
@@ -108,7 +108,7 @@ function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have not yet met their goal
-    const unfundedGames = GAMES_JSON.filter( (game) => {
+    let unfundedGames = GAMES_JSON.filter((game) => {
         return game.pledged < game.goal;
     }); 
 
@@ -118,12 +118,15 @@ function filterUnfundedOnly() {
 
 // show only games that are fully funded
 function filterFundedOnly() {
+
     deleteChildElements(gamesContainer);
 
+
     // use filter() to get a list of games that have met or exceeded their goal
-    const fundedGames = GAMES_JSON.filter((game) => {
+    let fundedGames = GAMES_JSON.filter((game) => {
         return game.pledged >= game.goal;
     });
+
 
     // use the function we previously created to add funded games to the DOM
     addGamesToPage(fundedGames);
