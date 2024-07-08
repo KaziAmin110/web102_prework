@@ -185,8 +185,6 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 // use destructuring and the spread operator to grab the first and second games
 let firstGame, secondGame, rest;
 [firstGame, secondGame, ...rest] = sortedGames;
-console.log(firstGame);
-console.log(secondGame);
 // create a new element to hold the name of the top pledge game, then append it to the correct element
 const divFirst = document.createElement('div');
 const divSecond = document.createElement('div');
@@ -196,3 +194,19 @@ divSecond.innerText = secondGame.name;
 firstGameContainer.appendChild(divFirst);
 secondGameContainer.appendChild(divSecond);
 // do the same for the runner up item
+
+// Implementation of Search Functionality 
+
+function searchGame() {
+    deleteChildElements(gamesContainer);
+    const searchText = document.querySelector('#search');
+    console.log(searchText.value);
+    const filteredGames = GAMES_JSON.filter((game) => {
+        return game.name.toLowerCase().includes(searchText.value.toLowerCase().trim());
+    });
+
+    addGamesToPage(filteredGames);
+}
+
+const submitBtn = document.querySelector('.submit-btn');
+submitBtn.addEventListener('click', searchGame);
