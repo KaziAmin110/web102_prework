@@ -60,7 +60,6 @@ function addGamesToPage(games) {
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
-addGamesToPage(GAMES_JSON);
 
 
 /*************************************************************************************
@@ -217,3 +216,6 @@ function searchGame() {
 const submitBtn = document.querySelector('.submit-btn');
 
 submitBtn.addEventListener('click', searchGame);
+
+// Page Initiailly displays Funded Games
+filterFundedOnly();
