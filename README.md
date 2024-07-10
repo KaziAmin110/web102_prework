@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [ ] Search Functionality Implementation which enables users to search for a specific game!
+* [x] Search Functionality Implementation which enables users to search for a specific game!
 
 
 ## Video Walkthrough
